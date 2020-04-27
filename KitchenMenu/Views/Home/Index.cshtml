@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Hello";
+}
+
+@model Dictionary<string, object>;
+
+<div class="jumbotron jumbotron-fliud">
+    <h1>Today's Special: @Model["food"]</h1>
+    <p>You have been here @Model["counter"] time(s)</p>
+    @{
+        int dozens = (int) Model["counter"] / 12;
+        int leftover = (int) Model["counter"] % 12;
+    }
+    <p>That's @dozens dozen(s) + @leftover to you</p>
+</div>
+
+<a href="/reset" class="btn btn-danger">Reset Counter</a>

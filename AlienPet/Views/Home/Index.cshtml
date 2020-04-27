@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="~/css/style.css">
+</head>
+<body>
+    <h1>Alien Pets are gifts or a myth of a Alien race?</h1>
+    @* <img src="~/img/....." alt="..."> *@
+    @{
+        <ul>
+            @foreach(var name in @ViewBag.alienpetNames)
+            {
+                if(name == "Rick")
+                {
+                    <li style= "color: red; font-weight:900; ">@name</li>
+                }
+                else
+                {
+                    <li>@name</li>
+                }
+            }
+        </ul>
+    }
+
+    <form action="/process" method="post">
+        <input type="text" name="name"/>
+        <button>Add Alien Pet</button>
+    </form>
+
+    <a href="/pageone">
+        <button> Another Page</button>
+    </a>
+</body>
+</html>

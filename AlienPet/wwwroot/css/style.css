@@ -1,0 +1,21 @@
+body {
+    background-color: blanchedalmond;
+}
+
+h1 {
+    background-color: tomato;
+    color: beige;
+}
+
+button {
+    background-color: tomato;
+    color: beige;
+}
+
+h3 {
+    border: 3px solid #ccc;
+    width: 500px;
+    padding: 50px;
+    text-align: center;
+    box-shadow: 6px 6px 6px #999;
+}

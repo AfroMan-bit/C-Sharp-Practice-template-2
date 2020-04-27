@@ -1,0 +1,41 @@
+﻿@model ActivityGame
+@{
+    ViewData["Title"] = "Home Page";
+}
+<script>
+   // $('document').ready(function(){
+                
+    //    $('.play').click(function(e){
+      //      e.preventDefault()
+    //        $.get("/test",function(data){
+    //            data = JSON.parse(data);
+        //        console.log(data);
+          //  })
+            
+   // })
+//})
+</script>
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-3">Dojodachi</h1>
+        <p class="lead">Here is a dojodachi</p>
+        <hr class="my-2">
+        <div class="text-center m-3"><p>@Model.Log</p>
+        <div class="d-flex justify-content-between">
+            <div class="flex-columm">
+                <p>Meals</p> <progress id="file"  value="@Model.Meal" max="100"> </progress>
+                <p>Fullness</p> <progress id="file"  value="@Model.Fullness" max="100"></progress>
+                <p>Energy</p> <progress id="file"  value="@Model.Energy" max="100"></progress>
+                <p>Happiness</p> <progress id="file"  value="@Model.Happiness" max="100"></progress>
+            </div>
+       <div> <img src="@Model.Img" height="250px" alt=""> </div>
+        </div>
+
+        <p class="lead mt-3 text-center">
+            <a href="/play"><button class="play btn-dark">play</button></a>
+            <a href="/work"><button class="work btn-dark">work</button></a>
+            <a href="/sleep"><button class="sleep btn-dark">sleep</button></a>
+            <a href="/feed"><button class="feed btn-dark">feed</button></a>
+        </p>
+    </div>
+</div>

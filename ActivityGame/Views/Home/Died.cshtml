@@ -1,0 +1,22 @@
+@model ActivityGame
+
+<div id="upper" class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-3">You have Died</h1>
+        <p class="lead">@Model.Log</p>
+        <hr class="my-2">
+    <div class="d-flex justify-content-between">
+        <div class="flex-columm">
+            <h4>Here are your stats.</h4>
+            <p>Meals:  @Model.Meal</p>
+            <p>Happiness: @Model.Happiness</p>
+            <p>Fullness:  @Model.Fullness</p>
+            <p>Energy:  @Model.Energy</p>
+        </div>
+        <div> <img src="@Model.Img" height="250px" alt=""> </div>
+    <div>
+        <p class="lead">
+            <a class="btn btn-danger btn-lg" href="/Restart" role="button">Restart</a>
+        </p>
+    </div>
+</div>
